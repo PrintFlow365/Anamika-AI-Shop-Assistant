@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-ink-100 text-ink-900 font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  button {
+    @apply select-none;
+  }
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-card;
+  }
+  .btn-press {
+    @apply transition-transform active:scale-[0.97];
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.bangla-num {
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+}
